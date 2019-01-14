@@ -13,9 +13,10 @@ func _init(var x, var y, var default = null):
 	COLUMNS = x
 	ROWS = y
 	
+	Grid.resize(x*y)
 	var i = 0
 	while i < x*y:
-		Grid.append(default)
+		Grid[i] = default
 		i += 1
 
 func setElement(var x, var y, var set):
